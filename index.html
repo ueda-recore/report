@@ -745,10 +745,8 @@
     <a href="#" class="logo">RECORE<span class="logo-sub">Community</span></a>
     <nav-links>
       <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">コミュニティとは</button>
-      <button onclick="document.getElementById('vision').scrollIntoView({behavior: 'smooth'})">ビジョン</button>
       <button onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">次回イベント</button>
       <button onclick="document.getElementById('reports').scrollIntoView({behavior: 'smooth'})">イベントレポート</button>
-      <button onclick="document.getElementById('roadmap').scrollIntoView({behavior: 'smooth'})">ロードマップ</button>
     </nav-links>
     <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior: 'smooth'})">参加する</button>
   </nav>
@@ -794,6 +792,83 @@
 
       <h3 style="font-size: 18px; font-weight: 700; color: var(--green-dark); margin-bottom: 16px; margin-top: 48px;" class="fade-in">基本ルール</h3>
       <p style="color: var(--text-sub); line-height: 1.85; max-width: 800px;" class="fade-in">株式会社RECOREからの対価は支払われません。他のメンバーが不快になるような営業活動は禁止です。運営メンバーや参加者の負担にならないよう、オフラインでの交流を大切にしています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENT REPORTS ===== -->
+<section id="reports" style="background: var(--bg);">
+  <div class="container">
+    <div class="label-en fade-in">EVENT REPORTS</div>
+    <h2 class="section-title fade-in">イベントレポート</h2>
+    <p class="section-sub fade-in">リユース業界のプロフェッショナルが集まり、実践的なノウハウを共有した<br>コミュニティイベントの記録です。</p>
+
+    <!-- 関東コミュニティ -->
+    <h3 style="font-size: 18px; font-weight: 700; color: var(--green-dark); margin-bottom: 24px; margin-top: 48px;" class="fade-in">関東コミュニティ</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0;">
+      <div class="report-card fade-in">
+        <div class="report-image">📸</div>
+        <div class="report-content">
+          <span class="report-badge">Vol.1</span>
+          <h3>Liquidと生成AIを活用して出品を効率化しよう！</h3>
+          <div class="report-meta">
+            <div class="report-meta-item">
+              <span class="report-meta-label">開催日</span>
+              2025年7月25日
+            </div>
+            <div class="report-meta-item">
+              <span class="report-meta-label">参加者</span>
+              15名
+            </div>
+          </div>
+          <p class="report-desc">RECOREのECテンプレート機能「Liquid」を活用した出品効率化をメインテーマに、ブックオフ様の実践事例を中心に情報共有を行いました。</p>
+          <a href="#" class="btn btn-gold" style="width: 100%; text-align: center;">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="report-card fade-in">
+        <div class="report-image">🎤</div>
+        <div class="report-content">
+          <span class="report-badge">Vol.2</span>
+          <h3>LINEミニアプリと会員ランク制度によるLTV最大化戦略</h3>
+          <div class="report-meta">
+            <div class="report-meta-item">
+              <span class="report-meta-label">開催日</span>
+              2026年1月23日
+            </div>
+            <div class="report-meta-item">
+              <span class="report-meta-label">登壇者</span>
+              株式会社アクト 吉田和由 氏
+            </div>
+          </div>
+          <p class="report-desc">中古工具専門リユースショップ「アクトツール」での LINEミニアプリ導入から会員ランク制度による LTV最大化戦略について共有。</p>
+          <a href="#" class="btn btn-gold" style="width: 100%; text-align: center;">詳細を見る</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 関西コミュニティ -->
+    <h3 style="font-size: 18px; font-weight: 700; color: var(--green-dark); margin-bottom: 24px; margin-top: 48px;" class="fade-in">関西コミュニティ</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0;">
+      <div class="report-card fade-in">
+        <div class="report-image">🌿</div>
+        <div class="report-content">
+          <span class="report-badge">Vol.1（関西）</span>
+          <h3>第1回RECORE関西コミュニティレポート</h3>
+          <div class="report-meta">
+            <div class="report-meta-item">
+              <span class="report-meta-label">開催日</span>
+              2026年6月5日
+            </div>
+            <div class="report-meta-item">
+              <span class="report-meta-label">参加者</span>
+              6名
+            </div>
+          </div>
+          <p class="report-desc">関西コミュニティの記念すべき第1回イベント。参加企業の成功事例を共有し、現場のリアルな工夫について深く掘り下げました。</p>
+          <a href="kansai/report.html" class="btn btn-gold" style="width: 100%; text-align: center;">詳細を見る</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -862,131 +937,12 @@
   </div>
 </section>
 
-<!-- ===== EVENT REPORTS ===== -->
-<section id="reports" style="background: var(--bg);">
-  <div class="container">
-    <div class="label-en fade-in">EVENT REPORTS</div>
-    <h2 class="section-title fade-in">イベントレポート</h2>
-    <p class="section-sub fade-in">リユース業界のプロフェッショナルが集まり、実践的なノウハウを共有した<br>コミュニティイベントの記録です。</p>
-
-    <div class="report-grid fade-in">
-      <div class="report-card">
-        <div class="report-image">📸</div>
-        <div class="report-content">
-          <span class="report-badge">Vol.1</span>
-          <h3>Liquidと生成AIを活用して出品を効率化しよう！</h3>
-          <div class="report-meta">
-            <div class="report-meta-item">
-              <span class="report-meta-label">開催日</span>
-              2025年7月25日
-            </div>
-            <div class="report-meta-item">
-              <span class="report-meta-label">参加者</span>
-              15名
-            </div>
-          </div>
-          <p class="report-desc">RECOREのECテンプレート機能「Liquid」を活用した出品効率化をメインテーマに、ブックオフ様の実践事例を中心に情報共有を行いました。</p>
-          <a href="#" class="btn btn-gold" style="width: 100%; text-align: center;">詳細を見る</a>
-        </div>
-      </div>
-
-      <div class="report-card">
-        <div class="report-image">🎤</div>
-        <div class="report-content">
-          <span class="report-badge">Vol.2</span>
-          <h3>LINEミニアプリと会員ランク制度によるLTV最大化戦略</h3>
-          <div class="report-meta">
-            <div class="report-meta-item">
-              <span class="report-meta-label">開催日</span>
-              2026年1月23日
-            </div>
-            <div class="report-meta-item">
-              <span class="report-meta-label">登壇者</span>
-              株式会社アクト 吉田和由 氏
-            </div>
-          </div>
-          <p class="report-desc">中古工具専門リユースショップ「アクトツール」での LINEミニアプリ導入から会員ランク制度による LTV最大化戦略について共有。</p>
-          <a href="#" class="btn btn-gold" style="width: 100%; text-align: center;">詳細を見る</a>
-        </div>
-      </div>
-
-      <div class="report-card">
-        <div class="report-image">🌿</div>
-        <div class="report-content">
-          <span class="report-badge">Vol.1（関西）</span>
-          <h3>第1回RECORE関西コミュニティレポート</h3>
-          <div class="report-meta">
-            <div class="report-meta-item">
-              <span class="report-meta-label">開催日</span>
-              2026年6月5日
-            </div>
-            <div class="report-meta-item">
-              <span class="report-meta-label">参加者</span>
-              6名
-            </div>
-          </div>
-          <p class="report-desc">関西コミュニティの記念すべき第1回イベント。参加企業の成功事例を共有し、現場のリアルな工夫について深く掘り下げました。</p>
-          <a href="kansai/report.html" class="btn btn-gold" style="width: 100%; text-align: center;">詳細を見る</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ROADMAP ===== -->
-<section id="roadmap" style="background: var(--surface);">
-  <div class="container">
-    <div class="label-en fade-in">ROADMAP</div>
-    <h2 class="section-title fade-in">コミュニティ・ロードマップ</h2>
-    <p class="section-sub fade-in">RECOREコミュニティは3つのフェーズで段階的に進化していきます。<br>現在はPhase 1「繋がる」を推進中です。</p>
-
-    <div class="roadmap fade-in">
-      <div class="phase-card current">
-        <span class="phase-badge">現在進行中</span>
-        <div class="phase-number">1</div>
-        <h3>繋がる</h3>
-        <div class="phase-subtitle">信頼のインフラ構築</div>
-        <p class="phase-description">Slackでの本音トークによる交流深化。全国のRECOREユーザーが業界の垣根を越えてつながり、信頼関係の土台を築きます。</p>
-        <div class="phase-items">
-          <div class="phase-item">Slackコミュニティの活性化</div>
-          <div class="phase-item">定期オフラインイベントの開催</div>
-          <div class="phase-item">メンバー間の相互紹介</div>
-        </div>
-      </div>
-
-      <div class="phase-card">
-        <div class="phase-number">2</div>
-        <h3>深掘り</h3>
-        <div class="phase-subtitle">テーマ別分科会による共創</div>
-        <p class="phase-description">EC自動化、CRM戦略などのテーマ別分科会を設立。専門性の高い議論を通じて、業界の課題解決に向けた共創を進めます。</p>
-        <div class="phase-items">
-          <div class="phase-item">EC自動化分科会</div>
-          <div class="phase-item">CRM・LTV最大化分科会</div>
-          <div class="phase-item">業者間取引マッチング</div>
-        </div>
-      </div>
-
-      <div class="phase-card">
-        <div class="phase-number">3</div>
-        <h3>創る</h3>
-        <div class="phase-subtitle">共同開発パートナーシップ</div>
-        <p class="phase-description">RECORE開発チームとの提言型・共同開発パートナーシップへ。現場の声を直接プロダクトに反映し、業界標準を共に創り上げます。</p>
-        <div class="phase-items">
-          <div class="phase-item">プロダクト開発への提言</div>
-          <div class="phase-item">ベータ機能の先行テスト</div>
-          <div class="phase-item">業界標準の共同策定</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== JOIN ===== -->
 <section id="join" class="join-section">
   <div class="container">
     <div class="label-en" style="color: var(--gold);">JOIN US</div>
     <h2 class="section-title">コミュニティに参加しませんか？</h2>
-    <p class="section-sub">RECOREをご利用中の企業様であれば、どなたでも参加できます。全国のリユース業界のプロフェッショナルと繋がり、ビジネスの成長を加速させましょう。</p>
+    <p class="section-sub" style="max-width: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">RECOREをご利用中の企業様であれば、どなたでも参加できます。全国のリユース業界のプロフェッショナルと繋がり、ビジネスの成長を加速させましょう。</p>
 
     <div class="join-grid">
       <div class="join-benefit">
@@ -994,16 +950,12 @@
         <p>全国のRECOREユーザーが蓄積した実践的なノウハウを共有できます。</p>
       </div>
       <div class="join-benefit">
-        <h4>業者間取引の機会</h4>
-        <p>RECORE導入企業同士での取引マッチングを通じた新たなビジネス機会。</p>
-      </div>
-      <div class="join-benefit">
         <h4>最新DX活用事例</h4>
         <p>Liquid × 生成AIなど最前線の技術活用事例をいち早く入手できます。</p>
       </div>
       <div class="join-benefit">
-        <h4>RECORE開発チームへの提言</h4>
-        <p>Phase 3では、現場の声を直接プロダクト開発に反映できます。</p>
+        <h4>RECORE新機能共有</h4>
+        <p>最新機能や更新情報をコミュニティメンバーに優先的に共有し、導入活用をサポートします。</p>
       </div>
       <div class="join-benefit">
         <h4>オフラインでの深い交流</h4>
@@ -1023,11 +975,14 @@
       </div>
       <div class="join-info-item">
         <div class="join-info-label">活動形式</div>
-        <div>オフラインイベント + Slackでのオンライン交流</div>
+        <div>オフラインイベント</div>
       </div>
       <div class="join-info-item">
         <div class="join-info-label">お問い合わせ</div>
-        <div><a href="mailto:seino@recore-corp.jp" style="color: var(--gold); text-decoration: none;">seino@recore-corp.jp</a></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div>【関東コミュニティ窓口】 清野：<a href="mailto:seino@recore-corp.jp" style="color: var(--gold); text-decoration: none;">seino@recore-corp.jp</a></div>
+          <div>【関西コミュニティ窓口】 上田：<a href="mailto:ueda@recore-corp.jp" style="color: var(--gold); text-decoration: none;">ueda@recore-corp.jp</a></div>
+        </div>
       </div>
     </div>
 
