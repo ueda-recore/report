@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第3回コミュニティイベント レポート | RECORE 関東コミュニティ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --green-dark: #1E3A14;
+  --green-mid: #2D4E1C;
+  --green-card: #1A3212;
+  --gold: #C4D44A;
+  --gold-dim: rgba(196,212,74,0.15);
+  --text: #2C2C2C;
+  --text-sub: #6A6A6A;
+  --bg: #F7F7F2;
+  --surface: #FFFFFF;
+  --border: #DDE0D8;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+/* ===== 共通 ===== */
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+section { padding: 96px 24px; }
+.label-en {
+display: flex;
+align-items: center;
+gap: 12px;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.18em;
+color: var(--gold);
+margin-bottom: 16px;
+}
+.label-en::before {
+content: '';
+display: block;
+width: 32px;
+height: 2px;
+background: var(--gold);
+flex-shrink: 0;
+}
+.section-title {
+font-family: 'Zen Kaku Gothic New', sans-serif;
+font-size: clamp(24px, 4vw, 36px);
+font-weight: 900;
+color: var(--green-dark);
+line-height: 1.3;
+margin-bottom: 20px;
+}
+.section-sub {
+color: var(--text-sub);
+font-size: 15px;
+margin-bottom: 48px;
+max-width: 600px;
+}
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background: var(--green-mid);
+color: #fff;
+font-size: 15px;
+font-weight: 700;
+padding: 15px 36px;
+border-radius: 12px;
+text-decoration: none;
+transition: all 0.2s;
+letter-spacing: 0.04em;
+box-shadow: 0 4px 16px rgba(45, 78, 28, 0.15);
+}
+.btn:hover { background: #3a6425; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(45, 78, 28, 0.2); }
+.btn-gold { background: var(--gold); color: var(--green-dark); }
+.btn-gold:hover { background: #d6e85a; }
+
+/* ===== HERO ===== */
+.hero {
+background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+color: #fff;
+padding: 80px 24px;
+text-align: center;
+}
+.hero-title {
+font-family: 'Zen Kaku Gothic New', sans-serif;
+font-size: clamp(28px, 6vw, 44px);
+font-weight: 900;
+margin-bottom: 16px;
+}
+.hero-subtitle {
+font-size: 18px;
+opacity: 0.9;
+margin-bottom: 32px;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+.hero-meta {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 24px;
+font-size: 14px;
+opacity: 0.85;
+}
+.hero-meta-item {
+display: flex;
+align-items: center;
+gap: 6px;
+}
+
+/* ===== INFO TABLE ===== */
+.info-table { max-width: 640px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04); margin: 40px auto; }
+.info-table table { width: 100%; border-collapse: collapse; }
+.info-table th, .info-table td {
+padding: 18px 24px;
+border-bottom: 1px solid var(--border);
+text-align: left;
+font-size: 14px;
+vertical-align: top;
+}
+.info-table tr:last-child th, .info-table tr:last-child td { border-bottom: none; }
+.info-table th { width: 110px; color: var(--text-sub); font-weight: 500; font-size: 13px; white-space: nowrap; background: var(--bg); }
+.info-table td { color: var(--green-dark); font-weight: 500; }
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: start;
+margin: 40px 0;
+}
+.about-text h3 {
+font-size: 18px;
+font-weight: 700;
+color: var(--green-dark);
+margin-bottom: 16px;
+margin-top: 24px;
+}
+.about-text h3:first-child {
+margin-top: 0;
+}
+.about-text p {
+color: var(--text-sub);
+line-height: 1.85;
+margin-bottom: 16px;
+}
+.about-text ul {
+color: var(--text-sub);
+line-height: 1.85;
+margin: 0 0 16px 20px;
+}
+.highlight-box {
+background: var(--gold-dim);
+border-left: 4px solid var(--gold);
+padding: 24px;
+border-radius: 8px;
+}
+
+/* ===== STATS ===== */
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 20px;
+margin: 40px 0;
+}
+.stat-card {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 28px 24px;
+text-align: center;
+transition: all 0.3s;
+}
+.stat-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px rgba(30, 58, 20, 0.1);
+border-color: var(--gold);
+}
+.stat-number {
+font-family: 'Zen Kaku Gothic New', sans-serif;
+font-size: 44px;
+font-weight: 900;
+color: var(--green-dark);
+margin-bottom: 8px;
+}
+.stat-label {
+color: var(--text-sub);
+font-size: 13px;
+font-weight: 500;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+position: relative;
+padding-left: 40px;
+margin: 40px 0;
+}
+.timeline::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+width: 2px;
+background: linear-gradient(180deg, var(--gold), transparent);
+}
+.timeline-item {
+position: relative;
+margin-bottom: 32px;
+padding-bottom: 24px;
+}
+.timeline-item::before {
+content: '';
+position: absolute;
+left: -48px;
+top: 0;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: var(--gold);
+border: 3px solid var(--surface);
+}
+.timeline-time {
+font-weight: 700;
+color: var(--green-dark);
+font-size: 14px;
+margin-bottom: 4px;
+}
+.timeline-title {
+font-weight: 700;
+color: var(--green-dark);
+font-size: 16px;
+margin-bottom: 8px;
+}
+.timeline-desc {
+color: var(--text-sub);
+font-size: 14px;
+line-height: 1.7;
+}
+.timeline-desc ul { margin: 8px 0 0 18px; }
+.timeline-desc li { margin-bottom: 4px; }
+
+/* ===== CTA ===== */
+.cta { background: var(--green-card); color: #fff; text-align: center; padding: 80px 24px; }
+.cta .label-en { justify-content: center; }
+.cta .label-en::before { display: none; }
+.cta h2 {
+font-family: 'Zen Kaku Gothic New', sans-serif;
+font-size: clamp(22px, 4vw, 34px);
+font-weight: 900;
+margin-bottom: 16px;
+}
+.cta p { opacity: 0.7; font-size: 15px; margin-bottom: 36px; }
+.cta-note { margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.4); }
+
+/* ===== FOOTER ===== */
+footer {
+background: #0F1E09;
+color: rgba(255,255,255,0.4);
+text-align: center;
+padding: 28px 24px;
+font-size: 12px;
+}
+footer strong { color: rgba(255,255,255,0.7); }
+
+/* ===== FADE-IN ===== */
+.fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 640px) {
+.about-section { grid-template-columns: 1fr; }
+.stats-grid { grid-template-columns: repeat(2, 1fr); }
+section { padding: 56px 20px; }
+.hero { padding: 60px 20px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title fade-in">第3回<br>RECORE関東コミュニティレポート</h1>
+  </div>
+</section>
+
+<!-- ===== OVERVIEW ===== -->
+
+<section style="background: var(--bg);">
+  <div class="container">
+    <div class="label-en fade-in">OVERVIEW</div>
+    <h2 class="section-title fade-in">開催概要</h2>
+
+    <div class="info-table fade-in">
+      <table>
+        <tr>
+          <th>開催日時</th>
+          <td>2026年6月19日（金）15:00〜17:00</td>
+        </tr>
+        <tr>
+          <th>開催場所</th>
+          <td>としま区民センター<br><span style="font-size: 12px; color: var(--text-sub);">懇親会：17:00〜（ケータリング）</span></td>
+        </tr>
+        <tr>
+          <th>参加者数</th>
+          <td>集計中</td>
+        </tr>
+        <tr>
+          <th>参加企業</th>
+          <td>集計中</td>
+        </tr>
+        <tr>
+          <th>主催者</th>
+          <td>株式会社RECORE（清野）</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+
+<section style="background: var(--surface);">
+  <div class="container">
+    <div class="label-en fade-in">ABOUT EVENT</div>
+    <h2 class="section-title fade-in">イベント概要</h2>
+
+    <div class="about-text fade-in">
+      <h3>イベント目的</h3>
+      <p>関東エリアのRECORE利用顧客コミュニティとして、参加者同士の対話と次につながる関係構築を促しながら、RECOREのカタログ設計思想を共有することを目的に開催しました。</p>
+
+      <h3>開催にあたってのこだわり</h3>
+      <p>関西イベントの振り返り（成功定義を厳格にせず対話・関係構築を重視する）を反映。単なる機能紹介ではなく「RECOREはなぜこの設計なのか」という思想レベルの共有にこだわり、清野（株式会社RECORE カスタマーサクセス）が登壇しました。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AGENDA ===== -->
+
+<section style="background: var(--bg);">
+  <div class="container">
+    <div class="label-en fade-in">AGENDA</div>
+    <h2 class="section-title fade-in">当日のタイムテーブル</h2>
+    <p class="section-sub fade-in">15:00〜17:00（本編、約2時間）／17:00〜 懇親会（ケータリング）</p>
+
+    <div class="timeline fade-in">
+      <div class="timeline-item">
+        <div class="timeline-time">15:00〜15:25</div>
+        <div class="timeline-title">オープニング・自己紹介・RECOREコミュニティの説明</div>
+        <div class="timeline-desc">清野隼土（株式会社RECORE カスタマーサクセス／RECOREコミュニティ運営担当）の自己紹介と、コミュニティの目的・使い方を説明しました。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">15:25〜16:00</div>
+        <div class="timeline-title">第1講座：RECOREのカタログに対する思想の共有（＋質疑応答）</div>
+        <div class="timeline-desc">
+          登壇：清野隼土
+          <ul>
+            <li>カタログは買取・販売・在庫・EC連携・分析すべての"起点"</li>
+            <li>「カタログ（親・PDコード）」と「在庫（子・ITコード）」の2層構造 — 1つのカタログから状態違いの在庫が複数生まれる仕組み</li>
+            <li>不変情報（型番・ブランド・JAN）と可変情報（コンディション・採寸等）を分けることで入力ゼロ・重複ゼロを実現</li>
+            <li>カタログが生む4つの効果：一元管理・出品自動化・ミス防止・分析最適化</li>
+            <li>商品マスタ「Leaves」（Amazon・ささげ(TAYS)・ECOLOGYMALLを集約）からJAN/ASINで必要な商品だけ取り込み、属性から商品名を自動生成</li>
+            <li>カタログは全店舗共有の資産だからこそ、登録ルールを先に揃えることが思想の核心</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">16:10〜16:55</div>
+        <div class="timeline-title">第2講座：型番がない商品の、理想的なカタログ管理とは？（＋ディスカッション）</div>
+        <div class="timeline-desc">
+          登壇：清野隼土
+          <ul>
+            <li>JANに頼れない一点物・ノーブランド商品をどう"型化"するかがテーマ</li>
+            <li>登録の最小要件は「商品名＋カテゴリ」の2つだけで自社オリジナルカタログを作成可能</li>
+            <li>型番の代わりに属性の組み合わせ（不変の商品属性／可変の在庫属性）で商品を定義</li>
+            <li>カテゴリ設計により一点物も「分析できる形」に（KPI分析・価格ルールの軸にもなる）</li>
+            <li>まとめ売りは「グロス管理」で4モードを使い分け、量り売りは重量買取で点数×量を精密管理</li>
+            <li>型番なし管理の3つの失敗パターン（ルール未定義・グロス後変更・属性スカスカ）と、方針を決め→属性を埋め→型化する理想形</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">16:55〜17:00</div>
+        <div class="timeline-title">クロージング</div>
+        <div class="timeline-desc">本日のまとめと、次回イベントのご案内を行いました。その後17:00〜懇親会（ケータリング）を実施しました。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONCLUSION ===== -->
+
+<section style="background: var(--surface);">
+  <div class="container">
+    <div class="label-en fade-in">CONCLUSION</div>
+    <h2 class="section-title fade-in">まとめ</h2>
+
+    <h3 style="font-size: 18px; font-weight: 700; color: var(--green-dark); margin-bottom: 24px;" class="fade-in">イベント開催を通じて得たもの</h3>
+    <p style="color: var(--text-sub); line-height: 1.9; margin-bottom: 16px;" class="fade-in">
+      運営メンバー3社（ブックオフコーポレーション株式会社・株式会社アクト・バイチャリ株式会社）と株式会社RECOREの共催で、ReCOREコミュニティ関東第3回イベントを開催しました。
+    </p>
+    <p style="color: var(--text-sub); line-height: 1.9; margin-bottom: 16px;" class="fade-in">
+      株式会社RECORE 清野より、カタログの親子構造・属性設計といったRECOREの設計思想と、型番がない商品をどう型化するかという実践的なノウハウを共有しました。単なる機能紹介にとどまらず「なぜこの設計なのか」という思想レベルまで踏み込んだことで、参加者の日々の登録業務の意味づけにつながる時間となりました。
+    </p>
+    <p style="color: var(--text-sub); line-height: 1.9;" class="fade-in">
+      お会いできる日を楽しみにしております！
+    </p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+
+<section class="cta">
+  <div class="label-en">NEXT COMMUNITY</div>
+  <h2>次回のコミュニティイベント</h2>
+  <p>第3回イベントへのご参加ありがとうございました。<br>次回のイベント情報は準備でき次第、こちらでお知らせいたします。</p>
+  <a href="https://ueda-recore.github.io/recore-portalsite/" class="btn" style="margin-top: 32px;">イベント一覧へ</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+  <p><strong>RECORE</strong> &copy; 2026 株式会社RECORE. All rights reserved.</p>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
